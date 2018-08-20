@@ -21,27 +21,21 @@ if player2 == "rock" or player2 == "paper" or player2 == "scissors":
 	elif player1 == "rock" and player2 == "paper":
 		print("Shoot!")
 		print("Player 2 wins!!! Paper covers rock")
-	elif player1 == "rock" and player2 == "rock":
-		print("Shoot!")
-		print("It's a tie!!! You both lose.")
 	elif player1 == "paper" and player2 == "scissors":
 		print("Shoot!")
 		print("Player 2 wins!!! Scissors cut paper")
-	elif player1 == "paper" and player2 == "paper":
-		print("Shoot!")
-		print("It's a tie!!! You both lose.")
 	elif player1 == "paper" and player2 == "rock":
 		print("Shoot!")
 		print("Player 1 wins!!! Paper covers rock")
-	elif player1 == "scissors" and player2 == "scissors":
-		print("Shoot!")
-		print("It's a tie!!! You both lose.")
 	elif player1 == "scissors" and player2 == "paper":
 		print("Shoot!")
 		print("Player 1 wins!!! Scissors cut paper")
 	elif player1 == "scissors" and player2 == "rock":
 		print("Shoot!")
 		print("Player 2 wins!!! Rock breaks scissors")
+	elif player1 == player2:
+		print("Shoot!")
+		print("It's a tie!!! You both lose")
 else:
 	print("Please enter 'rock', 'paper', or 'scissors' to play")
 	player2 = input("Enter Player 2's choice: ")
@@ -52,24 +46,18 @@ else:
 		elif player1 == "rock" and player2 == "paper":
 			print("Shoot!")
 			print("Player 2 wins!!! Paper covers rock")
-		elif player1 == "rock" and player2 == "rock":
-			print("Shoot!")
-			print("It's a tie!!! You both lose.")
 		elif player1 == "paper" and player2 == "scissors":
 			print("Shoot!")
 			print("Player 2 wins!!! Scissors cut paper")
-		elif player1 == "paper" and player2 == "paper":
-			print("Shoot!")
-			print("It's a tie!!! You both lose.")
 		elif player1 == "paper" and player2 == "rock":
 			print("Shoot!")
 			print("Player 1 wins!!! Paper covers rock")
-		elif player1 == "scissors" and player2 == "scissors":
-			print("Shoot!")
-			print("It's a tie!!! You both lose.")
 		elif player1 == "scissors" and player2 == "paper":
 			print("Shoot!")
 			print("Player 1 wins!!! Scissors cut paper")
 		elif player1 == "scissors" and player2 == "rock":
 			print("Shoot!")
 			print("Player 2 wins!!! Rock breaks scissors")
+		elif player1 == player2:
+			print("Shoot!")
+			print("It's a tie!!! You both lose")
