@@ -5,11 +5,11 @@ player1 = input("Enter Player 1's choice: ")
 
 #check for valid input and continue
 if player1 == "rock" or player1 == "paper" or player1 == "scissors":
-	print("*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n")
+	print("*** NO CHEATING ***\n\n" * 20)
 else:
 	print("Please enter 'rock', 'paper', or 'scissors' to play")
 	player1 = input("Enter Player 1's choice: ")
-	print("*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n*** NO CHEATING ***\n\n")
+	print("*** NO CHEATING ***\n\n" * 20)
 
 player2 = input("Enter Player 2's choice: ")
 
