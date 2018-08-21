@@ -13,7 +13,7 @@ else:
 print("...rock...")
 print("...paper...")
 print("...scissors...")
-player = input("Enter your choice: ")
+player = input("Enter your choice: ").lower()
 print(f"Computer plays {computer}")
 
 #find winner
