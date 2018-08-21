@@ -14,6 +14,7 @@ print("...rock...")
 print("...paper...")
 print("...scissors...")
 player = input("Enter your choice: ")
+print(f"Computer plays {computer}")
 
 #find winner
 if player == computer:
