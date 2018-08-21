@@ -1,7 +1,7 @@
-import random
+from random import randint
 
 #generate computer's choice
-computer = random.randint(0,2)
+computer = randint(0,2)
 if computer == 0:
 	computer = "rock"
 elif computer == 1:
