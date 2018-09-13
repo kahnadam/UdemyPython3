@@ -11,3 +11,13 @@ playlist = {
 		{"title": "Killer Queen", "artist": ["Queen"], "duration": 3.0 }
 	]
 }
+
+#what songs are in the playlist?
+for song in playlist["songs"]:
+	print(song["title"])
+
+#how long is the playlist?
+total_length = 0
+for song in playlist["songs"]:
+	total_length += song["duration"]
+print(total_length)
