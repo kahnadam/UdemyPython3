@@ -5,8 +5,8 @@ url = "https://icanhazdadjoke.com"
 #get the plain text version of the site
 response = requests.get(url, headers={"Accept": "application/JSON"})
 
-#returns the data as a string
-print(response.text)
+#set a variable that's a Python dictionary of the JSON data
+data = response.json()
 
-#take the JSON response and convert into Python
-print(response.json())
+#print the joke from the Python dictionary
+print(data["joke"])
