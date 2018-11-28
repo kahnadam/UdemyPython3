@@ -14,11 +14,12 @@ response = requests.get(
 ).json()
 
 num_jokes = response["total_jokes"]
+res = response["results"]
 
 if num_jokes > 1:
-    randjoke = response["results"][randint(0,num_jokes)]['joke']
+    randjoke = res[randint(0,num_jokes)]['joke']
     print(f"I've got {num_jokes} about {term}. Here's one: {randjoke}")
 elif num_jokes == 1:
-    print(f"I've got one joke about {term}. Here it is: {response['results'][0]}")
+    print(f"I've got one joke about {term}. Here it is: {res[0]}")
 else:
     print(f"Sorry, I don't have any jokes about {term}")
