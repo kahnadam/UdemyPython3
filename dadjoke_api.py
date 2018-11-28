@@ -11,17 +11,14 @@ response = requests.get(
     params={
         "term": term
     }
-)
+).json()
 
-data = response.json()["results"]
+num_jokes = response["total_jokes"]
 
-#make a list of just the jokes
-jokesonly = list(map(lambda j: j["joke"], data))
-
-if len(jokesonly) == 0:
+if num_jokes > 1:
+    randjoke = response["results"][randint(0,num_jokes)]['joke']
+    print(f"I've got {num_jokes} about {term}. Here's one: {randjoke}")
+elif num_jokes == 1:
+    print(f"I've got one joke about {term}. Here it is: {response['results'][0]}")
+else:
     print(f"Sorry, I don't have any jokes about {term}")
-elif len(jokesonly) == 1:
-    print(f"I've got one joke about {term}. Here it is: {jokes[0]}")
-elif len(jokesonly) > 1:
-    randjoke = jokesonly[randint(0,len(jokesonly))]
-    print(f"I've got {len(jokesonly)} jokes about {term}. Here's one: {randjoke}")
