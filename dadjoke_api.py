@@ -20,6 +20,6 @@ if num_jokes > 1:
     randjoke = res[randint(0,num_jokes)]['joke']
     print(f"I've got {num_jokes} about {term}. Here's one: {randjoke}")
 elif num_jokes == 1:
-    print(f"I've got one joke about {term}. Here it is: {res[0]}")
+    print(f"I've got one joke about {term}. Here it is: {res[0]['joke']}")
 else:
     print(f"Sorry, I don't have any jokes about {term}")
