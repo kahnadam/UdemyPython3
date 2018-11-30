@@ -4,19 +4,11 @@ class User:
         self.last = last
         self.age = age
 
+    #make a method to return first and last name
+    def full_name(self):
+        return f"{self.first} {self.last}"
+
 user1 = User("Joe","Smith",68)
 user2 = User("Biana","Lopez",31)
 
-print(user1.first, user1.last)
-print(user2.first, user2.last)
-
-class Animal:
-    def __init__(self,name,legs,speed):
-        self.name = name
-        self.legs = legs
-        self.speed = speed
-
-tortoise = Animal("tortoise",4,"slow")
-hare = Animal("hare",4,"fast")
-print(tortoise.speed)
-print(hare.speed)
+print(user2.full_name())
