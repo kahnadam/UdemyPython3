@@ -16,6 +16,13 @@ class User:
         self.age = age
         User.active_users += 1
 
+    #without this method, if you do something like print an object
+    #e.g., print(tom)
+    #you get just a bunch of python code like "<__main__.User object at 0x107085390>"
+    #so this changes how an object is represented
+    def __repr__(self):
+        return f"{self.first} is {self.age}"
+
     def logout(self):
         User.active_users -= 1
         return f"{self.first} has logged out"
@@ -37,6 +44,7 @@ class User:
         return f"Happy {self.age} birthday, {self.first}"
 
 tom = User.from_string("Tom,Jones,89")
-print(tom.first)
-print(tom.full_name())
-print(tom.birthday())
+print(tom)
+
+j = User("Judy","Steele",18)
+print(j)
