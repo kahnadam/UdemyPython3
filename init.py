@@ -1,8 +1,14 @@
 class User:
+    #define a class attribute called active_users
+    active_users = 0
+
     def __init__(self,first,last,age):
         self.first = first
         self.last = last
         self.age = age
+        #whenever a new user is initialized, increase active_users by one
+        #this is User. instead of self. because it's a class attribute
+        User.active_users += 1
 
     #make an instance method to return first and last name
     def full_name(self):
