@@ -1,6 +1,23 @@
 class User:
     active_users = 0
 
+
+    #- @classmethod is a decorator to indicate this function is a class method
+    #- naming this cls instead of self is a way of indicating to the programmer
+    #that this function refers to the class, not the instance
+
+    @classmethod
+    def display_active_users(cls):
+        return f"There are currently {cls.active_users} active users"
+
+    #create a classmethod that converts a string into variables that can be
+    #used to make a new object. Split the string along commas and assign
+    #to the variables
+    @classmethod
+    def from_string(cls,data_string):
+        first, last, age = data_string.split(",")
+        return cls(first,last,int(age))
+
     def __init__(self,first,last,age):
         self.first = first
         self.last = last
@@ -27,21 +44,14 @@ class User:
         self.age += 1
         return f"Happy {self.age} birthday, {self.first}"
 
-#instantiate two objects
-user1 = User("Joe","Smith",68)
-user2 = User("Bianca","Lopez",31)
+#user1 = User("Joe","Smith",68)
+#user2 = User("Bianca","Lopez",31)
+#print(User.display_active_users())
+#user3 = User("Tom","Franco",22)
+#user4 = User("Marie","Ford",66)
+#print(User.display_active_users())
 
-print(user2.full_name())
-print(user1.initials())
-
-#for the likes method you need to pass in a thing
-print(user2.likes("ice cream"))
-
-#is_senior is a boolean method to see if user is a is_senior
-print(user1.is_senior())
-print(user2.is_senior())
-
-#age
-print(user1.age)
-print(user1.birthday())
-print(user1.age)
+tom = User.from_string("Tom,Jones,89")
+print(tom.first)
+print(tom.full_name())
+print(tom.birthday())
