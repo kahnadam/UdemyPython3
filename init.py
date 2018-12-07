@@ -10,6 +10,10 @@ class User:
         #this is User. instead of self. because it's a class attribute
         User.active_users += 1
 
+    def logout(self):
+        User.active_users -= 1
+        return f"{self.first} has logged out"
+
     #make an instance method to return first and last name
     def full_name(self):
         return f"{self.first} {self.last}"
