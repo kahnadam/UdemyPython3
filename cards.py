@@ -6,7 +6,7 @@ class Card:
         self.suit = suit
 
     def __repr__(self):
-        return "{} of {}".format(self.value, self.suit)
+        return "{} of {}".format(self.suit, self.value)
 
 class Deck:
     def __init__(self):
@@ -39,3 +39,10 @@ class Deck:
         if self.count() < 52:
             raise ValueError("Only full decks can be shuffled")
         shuffle(self.cards)
+
+d = Deck()
+d.shuffle()
+card = d.deal_card()
+print(card)
+hand = d.deal_hand(5)
+print(hand)
