@@ -11,10 +11,12 @@ class Animal:
 
 class Cat(Animal):
     def __init__(self, name, species, breed, toy):
-        self.name = name
-        self.species = species
+        Animal.__init__(self, name, species)
         self.breed = breed
         self.toy = toy
 
-blue = Cat()
-print(blue.make_sound("meow"))
+blue = Cat("Blue", "cat", "Scottish Fold", "string")
+print(blue)
+print(blue.species)
+print(blue.breed)
+print(blue.toy)
