@@ -1,3 +1,5 @@
+from random import shuffle
+
 class Card:
     def __init__(self, value, suit):
         self.value = value
@@ -20,16 +22,20 @@ class Deck:
 
     def _deal(self, num):
         count = self.count()
-        actual = min([count],[num])
+        actual = min([count,num])
         if count == 0:
             raise ValueError("All cards have been dealt")
         cards = self.cards[-actual:]
         self.cards = self.cards[:-actual]
         return cards
 
-c = Card("4","Hearts")
-d = Deck()
-print(c)
-print(d)
-print(d._deal(3))
-print(d.count())
+    def deal_card(self):
+        return self._deal(1)[0]
+
+    def deal_hand(self, hand_size):
+        return self._deal(hand_size)
+
+    def shuffle(self):
+        if self.count() < 52:
+            raise ValueError("Only full decks can be shuffled")
+        shuffle(self.cards)
