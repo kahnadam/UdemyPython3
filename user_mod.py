@@ -36,7 +36,10 @@ class User:
         self.age += 1
         return f"Happy {self.age} birthday, {self.first}"
 
-tom = User.from_string("Tom,Jones,89")
-print(tom.first)
-print(tom.full_name())
-print(tom.birthday())
+class Moderator(User):
+    def __init__(self, first, last, age, community):
+        super().__init__(first, last, age)
+        self.community = community
+
+    def remove_post(self):
+        return f"{self.full_name} removed a post from the {self.community} community"
